@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<Sol_TagHelper_Movie_Cart.Models.MovieModel>
+
+<div class="container">
+    <div class="row">
+
+        @foreach (MovieModel movieModel in Model)
+        {
+        <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 d-flex align-items-stretch">
+            <div class="card m-3">
+                <img class='card-img-top' src='@movieModel.Url'>
+
+                <div style='background-color:black; height:40px'>
+                    <center>
+                        <h5 class='card-title' style='color:white;line-height:40px'>
+                            @movieModel.Title
+                        </h5>
+                    </center>
+                </div>
+
+                <div class='card-body'>
+                    <p class='card-text'>
+                        @movieModel.Details
+                    </p>
+                </div>
+
+                <a class='btn btn-primary'>View</a>
+            </div>
+        </div>
+        }
+
+    </div>
+</div>
+
+
+
